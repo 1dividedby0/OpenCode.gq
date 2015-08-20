@@ -7,10 +7,8 @@ body{
 }
 .body{
     position:relative;
-	min-height: 100px;
-	height: 100%;
 	padding: 20px 20px;
-    background:#a1a1a1;
+    background-image:url(swirl_pattern.png);
     width: 90%;
     margin: 0 auto;
 }
@@ -18,13 +16,13 @@ body{
     max-width: 100%;
     width: 70%;
     background:#FFFFFF;
-    white-space:nowrap;
+    padding-left: 20px;
     float: left;
 }
 .sidebar{
+    position:relative;
     background:#FFFFFF;
-    white-space:nowrap;
-    width: 26%;
+    width: 25%;
     padding-right: 20px;
     text-align: right;
     float:right;
