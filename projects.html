@@ -1,9 +1,53 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <object type="application/x-java-applet" height="300" width="550">
-    <param name="code" value="Sample" />
-    <param name="archive" value="Sample.jar" />
-    Applet failed to run.  No Java plug-in was found.
-    </object>
-  </body>
+<head>
+    <title>OpenCode | Home</title>
+    <link rel="stylesheet" type="text/css" href="homeStyle.css">
+    <link rel="stylesheet" type="text/css" href="navigataur.css">
+    <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Cabin+Sketch' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <h1 style="font-family: 'Special Elite', cursive; color: #000000; font-size: 48px">OpenCode</h1>
+        </div>
+        <div class="menuContainer">
+            <input type='checkbox' id='toggle'/>
+            <label for='toggle' class='toggle'></label>
+            <ul class="menu">
+                <li style="font-family: 'Special Elite', cursive;"><a href="index.html">Home</a></li>
+                <li style="font-family: 'Special Elite', cursive;"><a href="projects.html">Projects</a></li>
+                <li style="font-family: 'Special Elite', cursive;"><a href="about.html">About</a></li>
+                <li style="font-family: 'Special Elite', cursive;"><a href="submit.html">Submit</a></li> 
+                <li style="font-family: 'Special Elite', cursive;"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="body" style="height: 500px;">
+        <div class="main">
+            <p style="font-family: 'Cabin Sketch', cursive; font-size: 250%; padding-top: 20px;">Projects</p>
+            <p style="font-family: 'Source Code Pro'; font-size: 16px; padding-top: 5px;">
+                Welcome to the Projects page!
+            </p>
+            <applet></applet>
+        </div>
+        <div class="sidebar">
+            <p style="font-family: 'Cabin Sketch', cursive; font-size: 200%; padding-top: 10px;">Devlog</p>
+            <p style="font-family: 'Source Code Pro'; font-size: 12px; padding-top: 5px;">
+                - 8/18/15 11.38am - OpenCode v0.1 released!
+            </p>
+            <p style="font-family: 'Source Code Pro'; font-size: 12px; padding-top: 5px; word-wrap: break-word;">
+                - 8/18/15 4.26pm - OpenCode v0.1.1 released. Bugfixes, addition of graphics, addition of email box.
+            </p>
+            <p style="font-family: 'Source Code Pro'; font-size: 12px; padding-top: 5px;">
+                - 8/19/15 - OpenCode v0.2 released! Lots of graphical changes and functional changes.
+            </p>
+            <p style="font-family: 'Source Code Pro'; font-size: 12px; padding-top: 5px;">
+                - 8/20/15 - OpenCode v0.3 released! Introducing Projects page.
+            </p>
+        </div>
+    </div>
+</body>
 </html>
