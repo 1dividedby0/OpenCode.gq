@@ -31,7 +31,23 @@
             <p style="font-family: 'Source Code Pro'; font-size: 16px; padding-top: 5px;">
                 Welcome to the Projects page!
             </p>
-            <applet></applet>
+            <button onclick="req()">Try it</button>
+            <script>
+            function req(){
+                var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://api.github.com/search/repositories?q=game+language:java&sort=stars&order=desc", false);
+                xhr.send();
+                var message = xhr.responseText,
+                    obj = JSON.parse(message);
+                var results = document.getElementById('results');
+                for(var i=0; i<obj.items.length; i++){
+                    //alert(obj.items.html_url);
+        results.appendChild(document.createElement('P'));
+        results.appendChild(document.createTextNode(obj.items[i].html_url));
+                }
+            }
+            </script>
+            <div id="results"></div>
         </div>
         <div class="sidebar">
             <p style="font-family: 'Cabin Sketch', cursive; font-size: 200%; padding-top: 10px;">Devlog</p>
