@@ -47,8 +47,17 @@ xhr.open("GET", "https://api.github.com/search/repositories?q=" + document.getEl
                 var results = document.getElementById('results');
                 for(var i=0; i<obj.items.length; i++){
                     //alert(obj.items.html_url);
-        results.appendChild(document.createElement('P'));
-        results.appendChild(document.createTextNode(obj.items[i].html_url));
+        var a = document.createElement('a');
+        var linkText = document.createTextNode(obj.items[i].html_url);
+                    a.appendChild(linkText);
+                    a.title = obj.items[i].html_url;
+                    a.href = obj.items[i].html_url;
+                    results.appendChild(a);           
+                    var linebreak = document.createElement('br');
+                    results.appendChild(linebreak);
+
+                    var linebreak1 = document.createElement('br');
+                    results.appendChild(linebreak1);
                 }
                 }
             </script>
