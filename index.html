@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,11 @@
     <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Cabin+Sketch' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+    <script type="text/javascript">
+    Parse.initialize("gZwAo0odipyAJzBhnFFds6agtzsdTv3X6evA63Pa","oHORQT5q1Afc6dtlOBx6EHJseCQLYcAMK46gY3pD");
+    </script>
 </head>
 <body>
     <div class="header">
@@ -26,6 +32,41 @@
         </div>
     </div>
     <div class="body" style="height: 500px;">
+        <div class="login">
+            <form>
+  Username:
+  <input type="text" name="Username" id="username">
+  Password:
+  <input type="text" name="Password" id="password">
+</form>
+            <button onclick="signIn()">login</button>
+            <button onclick="signUp()">signup</button>
+            <script type="text/javascript">
+                function signIn(){
+                    Parse.User.logIn(document.getElementById("username").value, document.getElementById("password").value, {
+  success: function(user) {
+    window.open("projects.html","_self");
+  },
+  error: function(user, error) {
+    alert(error);
+  }
+});
+                }
+            function signUp(){
+              var user = new Parse.User();
+                    user.set("username", document.getElementById("username").value);
+                    user.set("password", document.getElementById("password").value);
+                    user.signUp(null, {
+                        success: function(user){
+                            alert("success");
+                        },
+                        error: function(user, error){
+                            alert("Error: " + error.code + " " + error.message);
+                        }
+                    });  
+            }
+            </script>
+        </div>
         <div class="main">
             <p style="font-family: 'Cabin Sketch', cursive; font-size: 250%; padding-top: 20px;">OpenCode</p>
             <p style="font-family: 'Source Code Pro'; font-size: 16px; padding-top: 5px;">
